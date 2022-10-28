@@ -1,0 +1,50 @@
+@use './variable' as v;
+@use  './breakpoints' as b;
+
+
+.fw-bold{
+    font-weight: v.$fw-bold;
+}
+
+
+.fw-regular{
+    font-weight: v.$fw-regular;
+}
+
+
+.fw-semibold{
+    font-weight: v.$fw-semibold;
+}
+
+.p-1{
+    // padding: 1rem;
+    @include b.breakpoint-up(medium){
+        padding: 1rem 0;
+    }
+}
+
+.tt-uppercase{
+    text-transform: uppercase;
+}
+
+.tt-capitalize{
+    text-transform: capitalize;
+}
+
+.active-img{
+    opacity: 0.3;
+    border: 3px solid v.$primary-orange-clr;
+}
+
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.attribution{
+    margin-top: 2rem;
+}

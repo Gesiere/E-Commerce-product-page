@@ -1,0 +1,117 @@
+@use  './variable' as v;
+@use  './breakpoints' as b;
+
+header {
+    @include b.breakpoint-up(medium){
+        border-bottom: 1px solid v.$black;
+        --primary-l: 90%;
+    }
+    nav{
+        padding: 1rem;
+        .left-nav{
+            .hamburger-menu{
+                margin-right: 1rem;
+            }
+        }
+        .right-nav {
+            .profile-img{
+                img{
+                    width: 2rem;
+                    @include b.breakpoint-up(medium){
+                        width: 3rem;
+                    }
+                    transition: var(--transition);
+                }
+                &:hover{
+                    border: 2px solid v.$primary-orange-clr;
+                    border-radius: 50%;
+                }
+            }
+            .cart-img {
+                position: relative;
+                img{
+                    margin-right: 1rem;
+                    @include b.breakpoint-up(medium){
+                        margin-right: 3rem;
+                    }
+                }
+                span{
+                    position: absolute;
+                    top: 0;
+                    background-color: v.$primary-orange-clr;
+                    color: v.$white;
+                    padding-inline:0.6rem;
+                    border-radius: 40px;
+                    font-size: 0.7rem;
+                    transform: translate(50%, -50%);
+
+                }
+            }
+        }
+        .nav-menu{
+            transition: --transition;
+            @include b.breakpoint-down(medium){
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                background: v.$white;
+                width: 60vw;
+                padding-top: 2rem;
+                height: 0;
+                overflow: hidden;
+                display: none;
+                z-index: 3;
+                &.active{
+                    display: block;
+                    height: 100vh;
+                }
+            }
+            .close-menu{
+                margin-left: 2rem;
+            }
+            .nav-links{
+                margin-top: 3rem;
+                margin-left: 2rem;
+                @include b.breakpoint-up(medium){
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 0;
+                    margin-left: 4rem;
+                }
+                li{
+                    line-height: 2.5;
+                    a{
+                        font-size: 18px;
+                        color: v.$black;
+                        --primary-l: 30%;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            height: 5px;
+                            left: 0;
+                            right: 0;
+                            bottom: -30px;
+                            background: v.$primary-orange-clr;
+                            width: 0;
+                            transition: all 400ms ease-in-out;
+                        }
+
+                        @include b.breakpoint-up(medium){
+                            margin-right:1rem;
+                            &:hover{
+                                &::before{
+                                    width: 100%;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+    
+</head>
+<body class="container">
+
+  <header class="p-1">
+    <nav class="flex flex-jc-sb flex-ai-c">
+      <div class="left-nav flex flex-jc-c flex-ai-c">
+
+        <div class="hamburger-menu hide-for-desktop">
+          <a href="#">
+            <img src="./images/icon-menu.svg" alt="A hamburger-menu">
+          </a>
+        </div>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="E-commerce Product Page Logo">
+        </div>
+        <div class="nav-menu">
+          <div class="close-menu hide-for-desktop">
+            <a href="#">
+              <img src="./images/icon-close.svg" alt="Close menu">
+            </a>
+          </div>
+            <ul class="nav-links fw-bold">
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="right-nav flex flex-ai-c flex-j-c">
+        <div class="cart-img cursor-pointer">
+          <img src="./images/icon-cart.svg" alt="E-commerce Product Page Cart Icon">
+        </div>
+        <div class="profile-img cursor-pointer">
+          <img src="./images/image-avatar.png" alt="E-commerce Product Page User Image">
+        </div>
+      </div>
+      
+    </nav>
+  </header>
+<main>
+  <section class="hero-section">
+
+    <!-- MOBILE SLIDES -->
+    <div class="slideshow-container  hide-for-desktop">
+      <div class="mySlides fade">
+        <img src="/images/image-product-1.jpg" alt="Product one image" class="img">
+      </div>
+      <div class="mySlides fade">
+        <img src="/images/image-product-2.jpg" alt="Product two image" class="img">
+      </div>
+      <div class="mySlides fade">
+        <img src="/images/image-product-3.jpg" alt="Product two image" class="img">
+      </div>
+      <div class="mySlides fade">
+        <img src="/images/image-product-4.jpg" alt="Product two image" class="img">
+      </div>
+
+      <!-- NEXT AND PREVIOUS BUTTONS -->
+      <button class="prev-btn">
+        <img src="/images/icon-previous.svg" alt="The Next Slide Button">
+      </button>
+      <button class="next-btn">
+        <img src="/images/icon-next.svg" alt="The Previous Slide Button">
+      </button>
+    </div>
+    
+    <div class="hero-container">
+      <div class="product-images hide-for-mobile">
+          <div class="top-image cursor-pointer">
+            <a >
+              <img src="/images/image-product-1.jpg" alt="Product Image">
+            </a>
+          </div>
+          <div class="thumbnail-images flex">
+            <a  >
+              <img class="active-img fade" src="/images/image-product-1-thumbnail.jpg" alt="Product Thumbnail Images" data-src="/images/image-product-1.jpg">
+            </a>
+            <a >
+              <img class="fade" src="/images/image-product-2-thumbnail.jpg" alt="Product Thumbnail Images" data-src="/images/image-product-2.jpg">
+            </a>
+            <a >
+              <img class="fade" src="/images/image-product-3-thumbnail.jpg" alt="Product Thumbnail Images" data-src="/images/image-product-3.jpg">
+            </a>
+            <a >
+              <img  class="fade" src="/images/image-product-4-thumbnail.jpg" alt="Product Thumbnail Images" data-src="/images/image-product-4.jpg">
+            </a>
+          </div>
+      </div>
+      <div class="hero-content">
+        <h4 class="fw-bold tt-uppercase">Sneakers Company</h4>
+        <h1 class="fw-bold">  Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="product_price-area">
+              <span class="new-price fw-bold">$125.00</span>
+              <span class="discount fw-bold">50.0%</span>
+              <span class="old-price fw-semibold"><s>250.00</s></span>
+          </div>
+          <div class="cart-area">
+            <div class="product-quantity">
+              <div class="decrease-icon">
+                <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
+              </div>
+              <input type="number" value="0" class="quantity-value">
+              <div class="increase-icon">
+                <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg>
+              </div>
+            </div>
+            <button class="fw-semibold btn addToCart">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>
+              Add to cart
+            </button>
+          </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="hide-for-mobile">
+    <div class="lightboxModal">
+      <div class="modal-content">
+        <svg class="close-btn" width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"fill-rule="evenodd"/></svg>
+        <div class="modal-slides">
+          <img src="/images/image-product-1.jpg" alt="Product image" class="img">
+        </div>
+        <div class="modal-slides">
+          <img src="/images/image-product-2.jpg" alt="Product image" class="img">
+        </div>
+        <div class="modal-slides">
+          <img src="/images/image-product-3.jpg" alt="Product image" class="img">
+        </div>
+        <div class="modal-slides">
+          <img src="/images/image-product-4.jpg" alt="Product image" class="img">
+        </div>
+    
+        <!-- NEXT AND PREVIOUS BUTTONS -->
+        <button class="prev-btn">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+        <button class="next-btn">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+    
+        <!-- THUMBNAILS  -->
+        <div class="thumbnails">
+          <div class="column">
+            <a>
+              <img src="/images/image-product-1-thumbnail.jpg" alt="Product Thumbnails" class="thumbnail-img active-img"  data-src="/images/image-product-1.jpg">
+            </a>
+          </div>
+          <div class="column">
+            <a>
+              <img src="/images/image-product-2-thumbnail.jpg" alt="Product Thumbnails" class="thumbnail-img"  data-src="/images/image-product-2.jpg">
+            </a>
+          </div>
+          <div class="column">
+            <a>
+              <img src="/images/image-product-3-thumbnail.jpg" alt="Product Thumbnails" class="thumbnail-img"  data-src="/images/image-product-3.jpg">
+            </a>
+          </div>
+          <div class="column">
+            <a>
+              <img src="/images/image-product-4-thumbnail.jpg"  alt="Product Thumbnails" class="thumbnail-img"  data-src="/images/image-product-4.jpg">
+            </a>
+          </div>
+        </div>
+    
+        </div>
+  
+      </div>
+
+  </section>
+  </div>
+  <div class="cart">
+      <div class="cart-header">
+        <h3 class="fw-bold">Cart</h3>
+      </div>
+      <div class="empty-cart">
+        <p class="fw-bold">Your cart is empty</p>
+      </div>
+      <div class="filled">
+        <div class="filled-cart flex flex-jc-sb flex-ai-c">
+          <div class="cart-content flex">
+            <img src="./images/image-product-1.jpg" alt="Product Image" class="filled-cart-image">
+            <div class="filled-cart-desc">
+              <p class="tt-capitalize hide-for-desktop">Autumn limited edition...</p>
+              <p class="tt-capitalize  hide-for-mobile">Fall limited edition sneakers</p>
+              <p class> 
+                <span class="cart-price"></span>
+                <span class="fw-bold total-price">$375.00</span></p>
+            </div>
+          </div>
+          <svg version="1.1" id="delete-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 482.428 482.429" style="enable-background:new 0 0 482.428 482.429;"
+          xml:space="preserve">
+       <g>
+         <g>
+           <path d="M381.163,57.799h-75.094C302.323,25.316,274.686,0,241.214,0c-33.471,0-61.104,25.315-64.85,57.799h-75.098
+             c-30.39,0-55.111,24.728-55.111,55.117v2.828c0,23.223,14.46,43.1,34.83,51.199v260.369c0,30.39,24.724,55.117,55.112,55.117
+             h210.236c30.389,0,55.111-24.729,55.111-55.117V166.944c20.369-8.1,34.83-27.977,34.83-51.199v-2.828
+             C436.274,82.527,411.551,57.799,381.163,57.799z M241.214,26.139c19.037,0,34.927,13.645,38.443,31.66h-76.879
+             C206.293,39.783,222.184,26.139,241.214,26.139z M375.305,427.312c0,15.978-13,28.979-28.973,28.979H136.096
+             c-15.973,0-28.973-13.002-28.973-28.979V170.861h268.182V427.312z M410.135,115.744c0,15.978-13,28.979-28.973,28.979H101.266
+             c-15.973,0-28.973-13.001-28.973-28.979v-2.828c0-15.978,13-28.979,28.973-28.979h279.897c15.973,0,28.973,13.001,28.973,28.979
+             V115.744z"/>
+           <path d="M171.144,422.863c7.218,0,13.069-5.853,13.069-13.068V262.641c0-7.216-5.852-13.07-13.069-13.07
+             c-7.217,0-13.069,5.854-13.069,13.07v147.154C158.074,417.012,163.926,422.863,171.144,422.863z"/>
+           <path d="M241.214,422.863c7.218,0,13.07-5.853,13.07-13.068V262.641c0-7.216-5.854-13.07-13.07-13.07
+             c-7.217,0-13.069,5.854-13.069,13.07v147.154C228.145,417.012,233.996,422.863,241.214,422.863z"/>
+           <path d="M311.284,422.863c7.217,0,13.068-5.853,13.068-13.068V262.641c0-7.216-5.852-13.07-13.068-13.07
+             c-7.219,0-13.07,5.854-13.07,13.07v147.154C298.213,417.012,304.067,422.863,311.284,422.863z"/>
+         </g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       <g>
+       </g>
+       </svg>
+       
+        </div>
+        <button class="fw-semibold btn">
+          Checkout
+        </button>
+      </div>
+    
+  </div>
+
+
+</main>
+
+
+  
+
+
+
+  
+  <div class="attribution text-center">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Gesiere Taraseke</a>.
+  </div>
+  <div class="overlay"></div>
+  <script src="/main.js"></script>
+</body>
+</html>

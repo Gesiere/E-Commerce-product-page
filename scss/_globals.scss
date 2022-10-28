@@ -1,0 +1,151 @@
+@use './breakpoints' as b;
+@use './variable' as v;
+
+body{
+    position: relative;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: v.$font-family;
+    z-index: 1;
+    &.noscroll{
+        overflow: hidden;
+    }
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p{
+    font-weight: 400;
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+    // flex box styles
+.flex{
+    display: flex;
+    
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+.grid{
+    display: grid;
+}
+
+.d-block{
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: 2;
+    display: none;
+    transition: all 0.4s ease-in-out;
+    &.active{
+        display: block;
+    }
+}
+
+.container{
+    max-width: 100%;
+    margin:  0 auto;
+    @include b.breakpoint-up(medium){
+        max-width: 55rem;
+    }
+    @include b.breakpoint-up(large){
+        max-width: 65rem;
+    }
+    @include b.breakpoint-up(xlarge){
+        max-width: 75rem;
+    }
+}
+
+
+.hide-for-mobile{
+    // hide for tablet and mobile devices
+    @include b.breakpoint-down(medium){
+        display: none;
+    }
+
+
+}
+
+.hide-for-desktop{
+    // hide for desktop viewport width
+    @include b.breakpoint-up(medium){
+        display: none;
+    }
+}
+
+
+.btn{
+    background-color: v.$primary-orange-clr;
+    color: v.$white;
+    padding: 1rem 4rem;
+    border: none;
+    font-size:1.25rem ;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px 0 10px 25px rgb(255 125 26 / 35%);
+    transition: all 0.4s ease-in-out;
+    @include b.breakpoint-down(small){
+        font-size: 1rem;
+    }
+    @include b.breakpoint-up(medium){
+        margin-left: 1rem;
+    }
+    svg{
+        margin-right: 1rem;
+    }
+    &:hover{
+        opacity: 0.5;
+    }
+}
